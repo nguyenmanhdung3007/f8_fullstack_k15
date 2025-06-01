@@ -1,0 +1,160 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: antiquewhite;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  margin: 0px;
+}
+
+/* font-scale */
+h1 {
+  font-size: 22px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+h2 {
+  font-size: 18px;
+  font-weight: bold;
+  padding-bottom: 10px;
+  border-bottom: 3px solid #333;
+}
+
+h3 {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+p {
+  font-size: 16px;
+}
+
+ul {
+  padding: 15px 0px 15px 20px;
+}
+
+li {
+  list-style-type: disc;
+  font-size: 16px;
+  line-height: 1.6;
+  text-align: justify;
+  padding-top: 2px;
+}
+
+strong {
+  font-weight: bold;
+}
+
+.description-title {
+  display: flex;
+  justify-content: space-between;
+}
+
+/* CV-CSS */
+.container {
+  max-width: 775px;
+  background-color: #fff;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.cv {
+  padding: 35px 55px;
+}
+
+.header {
+  text-align: center;
+  padding-bottom: 37px;
+}
+
+.description {
+  padding: 15px 0px;
+}
+
+.detail-1,
+.detail-2,
+.detail-3 {
+  padding-bottom: 15px;
+}
+
+/* Form-CSS */
+.form-label {
+  display: block;
+  font-weight: 500;
+  margin: 12px 0 4px;
+}
+
+#date-of-birth {
+  width: 100%;
+}
+
+.form-input {
+  border: 1px solid gray;
+  outline: none;
+  padding: 4px 8px;
+  border-radius: 3px;
+  width: 100%;
+}
+
+.container-register {
+  max-width: 400px;
+  background-color: aliceblue;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 30px;
+  padding: 20px 0;
+}
+
+.form-heading {
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.wrap-avatar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.avatar-img {
+  border-radius: 50%;
+  width: 70px;
+  height: 70px;
+  cursor: pointer;
+  /* text-align: center; */
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.card {
+  padding: 0px 20px;
+}
+
+.form-vertical label {
+  display: block;
+}
+
+.btn {
+  /* display: inline-block; */
+  border: none;
+  color: white;
+  text-decoration: none;
+  padding: 8px 16px;
+  min-width: 200px;
+  text-align: center;
+  background: blue;
+  border-radius: 10px;
+  width: 80%;
+  margin-top: 10px;
+}
+
+.footer-register {
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
