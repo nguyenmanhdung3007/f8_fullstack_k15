@@ -52,7 +52,7 @@ a {
   display: flex;
   width: 100%;
   height: 496px;
-  background: url("/assets/img/banner-2.jpg") center center/cover no-repeat;
+  background: url("../img/banner-2.jpg") center center/cover no-repeat;
 }
 
 .header-inner {
@@ -210,7 +210,7 @@ a {
   /* line-height: 30px; */
   line-height: 1.42857143;
   border-radius: 15px;
-  padding: 0 14px;
+  padding: 5px 14px;
   color: rgba(0, 0, 0, 0.8);
   margin: 0 9px 10px 9px;
   margin-bottom: 10px;
@@ -225,16 +225,18 @@ a {
 }
 
 .main-section {
-  /* background-color: black; */
   width: 75%;
   padding: 0px 15px;
   height: 1000px;
   margin-top: 0px;
-  /* display: flex;  */
-  align-items: stretch;
+}
+
+.wrapped-single-course {
+  width: 33.33%;
 }
 
 .description {
+  width: 500px;
   margin-left: auto;
   margin-right: auto;
 }
