@@ -1,0 +1,76 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  color: #fff;
+}
+
+h1 {
+  font-weight: 700;
+  font-size: 3.2rem;
+}
+
+h4 {
+  font-size: 1.8rem;
+  font-weight: 500;
+}
+
+p {
+  font-size: 1.5rem;
+}
+
+.wrapper-course {
+  display: flex;
+  justify-content: center;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  background-color: #272a31;
+  align-items: center;
+  border-radius: 10px;
+  padding: 20px 25px;
+}
+
+.wrapped-chapter {
+  width: 100%;
+  position: relative;
+  margin-top: 15px;
+}
+
+.wrapped-chapter-list {
+  border: 0.1rem solid #fff;
+}
+
+.course-title {
+  margin-bottom: 10px;
+}
+
+.chapter-title {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  padding: 8px 16px 12px;
+  font-size: 1.8rem;
+  font-weight: 500;
+  background-color: #272a31;
+  border-bottom: 1px solid #181d1e;
+}
+
+.chapter-detail-list {
+  list-style: none;
+  padding-left: 1rem;
+}
+
+.chapter-detail-list li {
+  padding: 0.5rem 0;
+  font-size: 1.4rem;
+  line-height: 1.6;
+  border-bottom: 1px solid #181d1e;
+}
