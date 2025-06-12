@@ -322,7 +322,7 @@ a {
 .wrapped-single-course {
   width: 100%;
   display: flex;
-  /* flex-flow: row wrap; */
+  flex-flow: row wrap;
 }
 
 .single-course {
