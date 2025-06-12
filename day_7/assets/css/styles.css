@@ -320,9 +320,14 @@ a {
 }
 
 .wrapped-single-course {
-  width: 33.33%;
+  width: 100%;
   display: flex;
-  flex-flow: row wrap;
+  /* flex-flow: row wrap; */
+}
+
+.single-course {
+  width: 33.33%;
+  padding: 0px 15px;
 }
 
 .single-course-detail {
@@ -332,7 +337,7 @@ a {
   margin-bottom: 30px;
 }
 
-.single-course-img {
+.single-course-img img {
   max-width: 100%;
   display: block;
   vertical-align: middle;
@@ -386,10 +391,6 @@ a {
   border-radius: 30px;
   text-decoration: none;
   outline: none;
-}
-
-.course-infomation > a:hover {
-  transform: translate3d(0px, -0.00741304px, 0px);
 }
 
 .description {
