@@ -5,6 +5,10 @@
 html {
   font-size: 62.5%;
 }
+html,
+body {
+  scroll-behavior: smooth;
+}
 
 h1,
 h2,
@@ -36,7 +40,6 @@ button {
 }
 
 .container {
-  max-width: 1170px;
   margin-left: auto;
   margin-right: auto;
   display: flex;
@@ -65,6 +68,8 @@ a {
   padding-top: 40px;
   display: flex;
   align-items: center;
+  /* position: fixed; */
+  max-width: 1170px;
 }
 
 .header-logo {
@@ -96,9 +101,6 @@ a {
   color: #fff;
 }
 
-.navbar > li:hover .sub-navbar {
-  display: block;
-}
 .sub-navbar > li > a:hover {
   background: #b80257;
   color: #fff;
@@ -113,13 +115,22 @@ a {
   position: relative;
 }
 
+.navbar > li:hover .sub-navbar {
+  /* display: block; */
+  transform: scale(1);
+  opacity: 1;
+}
+
 .sub-navbar {
   position: absolute;
   top: 35px;
   left: 0px;
   width: 240px;
   background: #fff;
-  display: none;
+  transition: all linear 0.4s;
+  opacity: 0;
+  transform: scale(1, 0);
+  transform-origin: 100% 2%;
 }
 
 .sub-navbar-list-item a {
@@ -127,6 +138,7 @@ a {
   color: rgba(0, 0, 0, 0.6);
   line-height: 4.5rem;
   position: relative;
+  transition: all 0.3s ease-in-out;
   text-transform: capitalize;
   display: block;
   padding: 0 0 0 25px;
@@ -222,22 +234,39 @@ a {
   font-weight: 700;
 }
 
-.title-banner p {
+.title-banner ul {
+  display: flex;
   font-size: 1.5rem;
   margin-top: 10px;
   color: rgba(255, 255, 255, 0.8);
+}
+
+.breadcrumb li a {
+  text-decoration: none;
+  transition: all 0.3s ease-in-out;
+  color: inherit;
+}
+
+.breadcrumb > li > a:hover {
+  color: #783df0;
+}
+
+.breadcrumb li + li::before {
+  content: "/";
+  padding: 0px 5px;
 }
 
 /* body  */
 .body-wrapper {
   margin-top: 100px;
   margin-bottom: 100px;
+  max-width: 1200px;
 }
 
 .sidebar {
   width: 25%;
+  height: 100%;
   padding: 0px 15px;
-  /* background-color: antiquewhite; */
 }
 
 .search-form {
@@ -275,6 +304,7 @@ a {
   border-bottom: 1px solid rgba(0, 0, 0, 0.05);
   text-decoration: none;
   font-size: 1.5rem;
+  transition: all 0.3s ease-in-out;
 }
 
 .course-sidebar-list ul {
@@ -305,40 +335,83 @@ a {
   text-decoration: none;
   outline: none;
   font-size: 1.5rem;
+  transition: all 0.3s ease-in-out;
 }
 
-.cource-menu li a:hover {
+.cource-menu li a:hover,
+.cource-menu li:first-child a {
   color: #fff;
   background: #783df0;
 }
 
 .main-section {
   width: 75%;
-  padding: 0px 15px;
-  height: 1000px;
   margin-top: 0px;
 }
 
 .wrapped-single-course {
   width: 100%;
   display: flex;
+  /* gap: 15px; */
   flex-flow: row wrap;
 }
 
 .single-course {
-  width: 33.33%;
+  width: 33.333%;
   padding: 0px 15px;
+  /* overflow: hidden; */
+  position: relative;
+  flex-grow: 1;
+}
+
+.single-course:hover .single-course-img img {
+  transform: scale(1.1);
+  opacity: 0.8;
+}
+
+.single-course:hover .single-course-detail .course-title h6 {
+  color: #b80257;
 }
 
 .single-course-detail {
   border: 1px solid #eeeeee;
   border-top: none;
-  padding: 15px 20px 15px 25px;
+  padding: 15px 20px;
   margin-bottom: 30px;
+}
+
+.single-course-img {
+  overflow: hidden;
+  position: relative;
+  background-image: -webkit-linear-gradient(
+    90deg,
+    rgb(40, 172, 225) 12%,
+    rgb(81, 204, 231) 50%,
+    rgb(122, 235, 236) 91%
+  );
+}
+
+.single-course:nth-child(3n + 2) .single-course-img::before {
+  content: "\e0b7";
+  font-family: "Font Awesome 6 Free";
+  -webkit-font-smoothing: antialiased;
+  font-weight: 900;
+  font-size: 24px;
+  color: #fff;
+  width: 90px;
+  height: 32px;
+  position: absolute;
+  top: -47px;
+  right: -77px;
+  z-index: 99;
+  transform: rotate(35deg);
+  padding: 64px 0 0 53px;
+  background: #b80257;
 }
 
 .single-course-img img {
   max-width: 100%;
+  transition: all 0.6s ease-in-out;
   display: block;
   vertical-align: middle;
 }
@@ -348,6 +421,7 @@ a {
   font-size: 1.8rem;
   color: #464646;
   line-height: 2.4rem;
+  transition: all 0.3s ease-in-out;
 }
 .course-description {
   color: #000;
@@ -380,6 +454,39 @@ a {
   background: #783df0;
   font-weight: 400;
 }
+.course-infomation > a.no-free-course {
+  background: #b80257;
+  font-weight: 400;
+}
+.course-infomation > a.free-course:hover,
+.course-infomation > a.no-free-course:hover {
+  transform: translateY(-5px);
+}
+.course-infomation > a.free-course:hover:before,
+.course-infomation > a.no-free-course:hover:before {
+  opacity: 1;
+  transform: translateY(5px);
+}
+
+.course-infomation > a.free-course::before,
+.course-infomation > a.no-free-course::before {
+  pointer-events: none;
+  position: absolute;
+  z-index: -1;
+  content: "";
+  top: 100%;
+  left: 5%;
+  height: 10px;
+  width: 90%;
+  opacity: 0;
+  background: radial-gradient(
+    ellipse at center,
+    rgba(0, 0, 0, 0.35) 0%,
+    rgba(0, 0, 0, 0) 80%
+  );
+  transition-duration: 0.3s;
+  transition-property: transform, opacity;
+}
 
 .course-infomation > a {
   width: 66px;
@@ -391,10 +498,210 @@ a {
   border-radius: 30px;
   text-decoration: none;
   outline: none;
+  transition: all 0.3s ease-in-out;
 }
 
 .description {
   width: 500px;
   margin-left: auto;
   margin-right: auto;
+}
+
+/* Pagination */
+.course-pagination {
+  width: 100%;
+  height: 74.4px;
+  display: flex;
+  align-items: flex-end;
+  padding-left: 15px;
+}
+
+.course-pagination li {
+  padding-top: 45px;
+}
+
+.number-pagination a {
+  display: block;
+  text-decoration: none;
+  font-size: 1.5rem;
+  font-family: inherit;
+  width: 29px;
+  line-height: 27px;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  text-align: center;
+  font-weight: 600;
+  border-radius: 8px;
+  margin-right: 8px;
+  color: rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease-in-out;
+}
+
+.course-pagination li a:hover {
+  border-style: solid;
+  border-color: #783df0;
+  color: #783df0;
+}
+
+.course-pagination li:first-child a {
+  border-style: solid;
+  border-color: #783df0;
+  color: #783df0;
+}
+
+.course-pagination li:last-child a {
+  width: 58px;
+  font-size: 14px;
+  text-transform: uppercase;
+  color: #fff;
+  margin-left: 10px;
+  margin-right: 8px;
+  background: #783df0;
+  border-style: solid;
+  border-color: #783df0;
+}
+
+/* footer */
+.footer {
+  display: block;
+  width: 100%;
+  background-color: #151515;
+  padding: 80px 0 160px 0;
+}
+
+.footer-wrapped {
+  max-width: 1170px;
+}
+
+.footer-logo {
+  width: 24.35%;
+  padding-right: 15px;
+}
+
+.footer p {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.footer-logo p {
+  font-size: 1.4rem;
+  line-height: 2.2rem;
+}
+
+.footer-logo p:nth-child(2) {
+  margin: 20px 0;
+}
+
+.footer-logo ul {
+  display: flex;
+  margin-top: 30px;
+}
+
+.footer-logo > ul > li:first-child {
+  margin-right: 22px;
+}
+
+.footer-list {
+  padding: 0px 15px;
+  width: 17.1%;
+}
+
+.footer-list > h6 {
+  font-size: 2rem;
+  margin: 8px 0px 25px;
+  color: #fff;
+}
+
+.footer-list ul li a {
+  color: rgba(255, 255, 255, 0.6);
+  line-height: 30px;
+  font-size: 1.5rem;
+  text-decoration: none;
+  transition: all 0.3s ease-in-out;
+}
+
+.footer-list ul li:hover a {
+  color: #b80257;
+}
+
+.footer-subcribe {
+  width: 24.35%;
+}
+
+.footer-subcribe h6 {
+  font-size: 2rem;
+  margin: 8px 0px 25px;
+  color: #fff;
+}
+
+.footer-subcribe {
+  padding-left: 15px;
+}
+
+.footer-subcribe p {
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 1.5rem;
+  line-height: 2.2rem;
+}
+
+.footer-subcribe input {
+  width: 100%;
+  height: 40px;
+  background: #272727;
+  border: none;
+  border-radius: 20px;
+  margin: 25px 0 10px 0;
+  padding: 0 20px;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.footer-subcribe button {
+  width: 95px;
+  font-size: 1.5rem;
+  line-height: 40px;
+  border-radius: 20px;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  background: #b80257;
+  transform: translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  vertical-align: middle;
+  backface-visibility: hidden;
+  transition-property: all;
+  transition-duration: 0.3s;
+}
+
+.footer-subcribe button:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #fff;
+  border-radius: 30px;
+  transform: scale(0);
+  transition: all 0.3s ease-in-out;
+}
+
+.footer-subcribe button:hover::before {
+  transform: scale(1);
+  /* color: #b80257; */
+}
+
+.footer-subcribe button:hover {
+  color: #b80257;
+}
+
+.scroll-top {
+  width: 40px;
+  height: 40px;
+  position: fixed;
+  bottom: 5px;
+  right: 5px;
+  z-index: 99;
+  text-align: center;
+  color: #fff;
+  background: #b80257;
+  font-size: 25px;
 }
