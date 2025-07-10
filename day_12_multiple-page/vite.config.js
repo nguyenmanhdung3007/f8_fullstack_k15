@@ -13,6 +13,7 @@ export default defineConfig({
       input: {
         main: path.resolve(__dirname, "src/index.html"),
         about: path.resolve(__dirname, "src/about.html"),
+        contact: path.resolve(__dirname, "src/contact.html"),
       },
     },
   },
