@@ -1,0 +1,168 @@
+.f16 {
+  color: rgba(255, 255, 255, 0.8);
+
+  /* 16 */
+  font-family: "Plus Jakarta Sans";
+  font-size: 1.6rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 26px; /* 162.5% */
+}
+
+.f18 {
+  color: var(--White, #fff);
+  text-align: center;
+
+  /* 18 */
+  font-family: "Plus Jakarta Sans";
+  font-size: 1.8rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 28px; /* 155.556% */
+}
+
+.f24 {
+  color: #fff;
+
+  /* 24 */
+  font-family: "Libre Bodoni";
+  font-size: 2.4rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 34px; /* 141.667% */
+  text-transform: capitalize;
+}
+
+h2,
+.h2 {
+  color: #fff;
+  font-family: "Libre Bodoni", serif;
+  font-size: 6.4rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 74px;
+}
+
+h3,
+.h3 {
+  color: #111114;
+
+  /* H3 */
+  font-family: "Libre Bodoni", serif;
+  font-size: 4rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 50px; /* 125% */
+  text-transform: capitalize;
+}
+h4,
+.h4 {
+  color: var(--White, #fff);
+
+  /* H4 */
+  font-family: "Libre Bodoni";
+  font-size: 3rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 40px; /* 133.333% */
+}
+h5,
+.h5 {
+  color: #fff;
+  font-family: "Plus Jakarta Sans";
+  font-size: 2rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 26px; /* 130% */
+}
+
+.orange-color {
+  color: #fb8f2c;
+}
+
+.underline-text {
+  &::after {
+    content: "";
+    border-bottom: 1px solid #fb8f2c;
+    width: 85px;
+    display: block;
+  }
+}
+
+.menu-card {
+  img {
+    width: 100%;
+  }
+  .menu-title-price {
+    margin-top: 16px;
+    margin-bottom: 6px;
+    .f24 {
+      font-family: "Libre Bodoni", serif;
+    }
+  }
+
+  .menu-order-fb {
+    margin-top: 16px;
+    margin-bottom: 16px;
+  }
+
+  .order-btn {
+    color: #fb8f2c;
+  }
+  .order-btn::after {
+    content: "";
+    border-bottom: 1px solid #fb8f2c;
+    width: 85px;
+    display: block;
+  }
+}
+
+.choose-and-taste {
+  .sub-title {
+    margin-bottom: 10px;
+  }
+  .title {
+    margin-bottom: 20px;
+  }
+  .desc {
+    margin-bottom: 60px;
+    .f16 {
+      max-width: 600px;
+    }
+  }
+}
+
+.nav-menu-list {
+  gap: 60px;
+}
+
+.nav-menu-list li {
+}
+
+.nav-menu-list li:first-child a {
+  color: #fb8f2c;
+}
+
+.breakline {
+  /* width: 100%; */
+  margin-top: 30px;
+  margin-bottom: 30px;
+  height: 1px;
+  border-bottom: 3px solid rgba(255, 255, 255, 0.8);
+  opacity: 0.2;
+  background: rgba(255, 255, 255, 0.8);
+}
+
+.menu-info {
+  gap: 20px;
+}
+
+.menu-card-mini-name {
+  width: 302px;
+  text-align: left;
+}
+
+.menu-mini-left,
+.menu-mini-right {
+  gap: 40px;
+}

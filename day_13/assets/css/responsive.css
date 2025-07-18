@@ -1,0 +1,52 @@
+.test {
+  /* width: 810px; */
+}
+
+@media (max-width: 1399.98px) {
+}
+
+@media (max-width: 1199.98px) {
+}
+
+@media (max-width: 991.98px) {
+  .header-nav {
+    display: none;
+  }
+  .header-nav-mobile {
+    display: block;
+  }
+  .img-intro .desktop {
+    display: none;
+  }
+  .offer-card {
+    flex-direction: column;
+  }
+  .offer-card img {
+    /* width: 300px;
+    height: 300px; */
+  }
+
+  .daily-offer .right {
+    margin-top: 30px;
+    gap: 50px;
+  }
+
+  .article .left .article-card {
+    flex-direction: column;
+  }
+  .article .right .article-card {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .restaurant-intro .desc {
+    display: none;
+  }
+  .group-reservation p {
+    display: none;
+  }
+}
+
+@media (max-width: 575.98px) {
+}

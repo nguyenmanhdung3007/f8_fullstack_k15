@@ -1,0 +1,307 @@
+/* commen */
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.6rem;
+  background: #111114;
+  font-family: "Plus Jakarta Sans", sans-serif;
+}
+
+button,
+input,
+textarea,
+select {
+  font-size: inherit;
+  font-family: inherit;
+}
+
+button {
+  cursor: pointer;
+  background: transparent;
+  outline: none;
+  border: none;
+}
+
+a {
+  text-decoration: none;
+  font-size: inherit;
+  color: inherit;
+}
+
+.d-flex {
+  display: flex;
+}
+
+.d-row {
+  flex-direction: row;
+}
+.d-col {
+  flex-direction: column;
+}
+
+.flex-between {
+  justify-content: space-between;
+}
+
+.flex-align {
+  align-items: center;
+}
+
+.flex-justify {
+  justify-content: center;
+}
+
+.text-center {
+  text-align: center;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* header */
+.header {
+  align-items: center;
+  margin-top: 30 px;
+}
+
+.header-nav-mobile {
+  display: none;
+}
+
+.bar-icon {
+  color: #fff;
+}
+
+.header-nav-list {
+  gap: 34px;
+}
+
+.group-reservation {
+  gap: 28px;
+}
+
+.take-reservation {
+  text-decoration: underline;
+}
+
+.header-slider {
+  margin-top: 40px;
+}
+
+.header-slider > .row-cols-2 {
+  align-items: center;
+  /* justify-content: center; */
+}
+
+.slider-left > a {
+  color: #fb8f2c;
+}
+.slider-left .text {
+  margin-bottom: 40px;
+}
+
+.slider-left > h2 {
+  color: #fff;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  text-transform: capitalize;
+}
+
+.slider-left > a::after {
+  content: "";
+  border-bottom: 1px solid #fb8f2c;
+  width: 75px;
+  display: block;
+}
+
+.slider-right img {
+  width: 100%;
+}
+
+/* slider-bar */
+
+.slider-bar {
+  background: url(../imgs/slider-bar.svg) center/cover no-repeat;
+  min-height: 194px;
+  padding: 60px 208px;
+  margin-top: 70px;
+  margin-bottom: 139px;
+}
+
+.wrapper-content {
+  gap: 19px;
+}
+
+.wrapper-content .f24 {
+  width: 148px;
+}
+
+.most-popular-food {
+  padding-top: 48px;
+  padding-bottom: 48px;
+}
+
+.most-popular-food h2 {
+  margin-bottom: 20px;
+}
+
+.most-popular-food-content {
+  margin-bottom: 60px;
+}
+
+.find-us {
+  padding: 54px 0;
+}
+.find-us-right {
+  background: #fb8f2c;
+  .f16,
+  .f24 {
+    color: #111114;
+  }
+}
+
+.find-us-right,
+.find-us-left {
+  padding: 73px 80px;
+}
+
+.choose-and-taste {
+  padding: 70px 0;
+}
+
+.menu-info {
+  gap: 20px;
+}
+
+.menu-card-mini-name {
+  width: 302px;
+  text-align: left;
+}
+
+.restaurant-intro {
+  padding: 61px 0;
+  .desc {
+    max-width: 625px;
+  }
+}
+
+.restaurant-intro .desc {
+  max-width: 625px;
+  display: block;
+  margin-bottom: 60px;
+}
+
+.book-now {
+  margin-top: 80px;
+}
+
+.book-now .left {
+  height: 394px;
+  background: #fb8f2c;
+  padding: 40px;
+}
+
+.book-now .right {
+}
+
+.book-desc {
+  margin-top: 40px;
+  gap: 99px;
+  margin-bottom: 74px;
+}
+
+.book-desc .f24 {
+  color: #111114;
+}
+
+.book-btn {
+  width: 311px;
+  height: 56px;
+  background: #111114;
+  backdrop-filter: blur(1px);
+}
+
+.daily-offer {
+  margin-top: 100px;
+}
+
+.offer-card {
+  gap: 28px;
+  align-items: center;
+}
+
+.offer-desc {
+  text-align: left;
+}
+.offer-detail {
+  gap: 16px;
+}
+
+.slider-2,
+.slider-3 {
+  margin-top: 150px;
+  margin-bottom: 150px;
+}
+
+.chef-list .desc {
+  max-width: 768px;
+  display: block;
+  margin-top: 16px;
+  margin-bottom: 40px;
+}
+
+.article {
+  margin-top: 100px;
+}
+.article .title {
+  margin-top: 20px;
+  margin-bottom: 60px;
+}
+
+.article-card {
+  text-align: left;
+  gap: 30px;
+}
+
+.article .right .article-card {
+  flex-direction: row-reverse;
+}
+
+.article-card .name {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.article-card .comment-view {
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.article .view-more {
+  margin-top: 40px;
+}
+
+.slider-3 {
+  height: 242px;
+  background: url(../imgs/slider-3.png) center/cover no-repeat;
+}
+
+.new-letter {
+  padding: 70px 0;
+}
+.new-letter h3 {
+  color: #fff;
+}
+
+.footer img {
+  width: 198.98px;
+  height: 48px;
+}

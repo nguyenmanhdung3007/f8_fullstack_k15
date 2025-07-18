@@ -1,0 +1,41 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+.body {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.main {
+  font-size: 3rem;
+  width: 600px;
+}
+
+.main ul {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+
+.item {
+  background-color: rgb(75, 212, 93);
+  min-height: 160px;
+  padding: 10px;
+  color: #fff;
+  font-size: 2.5rem;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+/* home-page */
